@@ -1,0 +1,237 @@
+.container-titulo__h1 {
+    height: calc(8vw + 6px);
+    background-image: linear-gradient(90deg, #00C0FF 0, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 700;
+    animation: rainbow 3s ease-in-out infinite;
+}
+
+.container-titulo__h1::after {
+    content: 'Derivacion de Gramática libre de Contexto';
+    width:98%;
+    color: #000;
+    height: 7vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rainbow {
+    to {
+        background-position: 80vw;
+    }
+}
+
+.section-principal {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.section-principal__form-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-flex__item {
+    margin: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    font-size: 25px;
+    margin: 0px 10px;
+}
+
+.form-group input {
+    font-size: 20px;
+}
+
+.form-flex__item-buton{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.container-button {
+    margin: 10px;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	background: #141414;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .3s ease all;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.container-button__submit {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.container-button__span {
+	transition: .4s ease-in-out all;
+	position: absolute;
+	left: 30%;
+}
+
+.container-button__span-tabla {
+    transition: .4s ease-in-out all;
+	position: absolute;
+	left: 20%;
+}
+
+.container-button__span-derivar{
+    transition: .4s ease-in-out all;
+	position: absolute;
+	left: 30%;
+}
+
+.container-button__icono {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	z-index: 2;
+	left: -40px;
+	transition: .3s ease-in-out all;
+	opacity: 0;
+}
+
+.container-button:hover {
+	background: #0d6efd;
+}
+
+.container-button:hover .container-button__icono {
+	left: calc(100% - 30px);
+	opacity: 1;
+}
+
+.container-button:hover span {
+	left: 20px;
+}
+
+.container-button-tabla:hover {
+    background: #dc3545;
+}
+
+.section-principal__table {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+table {
+    text-align: center;
+}
+
+.container-derivacion {
+    text-align: center;
+}
+
+.container-derivacion__h2 {
+    font-family: monospace;
+}
+
+.container-creditos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-creditos__p {
+    font-size: 18px;
+}
+
+.container-creditos__ul {
+    list-style: none;
+    font-size: 18px;
+    height: 33px;
+    line-height: 33px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+
+.container-creditos__li {
+    position: relative;
+    top: 0;
+    animation: cambiar 12s steps(3) infinite;
+}
+
+@keyframes cambiar {
+    100%{top: -100px;}
+}
+
+.container-creditos__li span {
+    position: relative;
+    line-height: 23px;
+    margin: 5px 0;
+}
+
+.container-creditos__li span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background: #fff;
+    border-left: 1px solid #000;
+    animation: typing 4s steps(14) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: calc(100%);
+    }
+
+    100%{left: 0;}
+}
+
+/* responsive */
+
+@media only screen and (max-width: 600px) {
+    .form-flex__item-h2 {
+        font-size: 18px;
+    }
+
+    .container-button {
+        margin: 10px;
+    }
+
+    .form-group label {
+        font-size: 18px;
+    }
+
+    .form-group input {
+        font-size: 18px;
+    }
+
+}
