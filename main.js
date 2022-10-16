@@ -7,12 +7,7 @@ let size = [];
 let cadenaFinal = ""; 
 let letrasIniciales ="";
 
-const btnTabla = document.getElementById("btn-limpiarTabla");
-btnTabla.addEventListener("click", ()=>{
-    location.reload();
-});
-
-const btnDerivar = document.getElementById("btn-derivar");
+const listaProds = document.getElementById('cuerpotabla');
 
 class produccion {
     constructor(cabeza, cuerpo){
@@ -22,8 +17,6 @@ class produccion {
 }
 class agregar {
     addProducciones(produccion){
-        
-        const listaProds = document.getElementById('tablita');
         const element = document.createElement('tr');
         element.innerHTML = `
         <td>${produccion.cabeza}</td>
@@ -34,7 +27,6 @@ class agregar {
         cabezas.push(produccion.cabeza);
         cuerpos.push(produccion.cuerpo);
         this.resetForm();
-
     }
     resetForm(){
         document.getElementById('prod-formulario').reset();
@@ -116,4 +108,9 @@ document.getElementById('prod-formulario').addEventListener('submit', function(e
     const ui = new agregar();
     ui.addProducciones(producciones);
     event.preventDefault();
+});
+
+const btnTabla = document.getElementById("btn-limpiarTabla");
+btnTabla.addEventListener("click", ()=>{
+    location.reload();
 });

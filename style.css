@@ -153,6 +153,15 @@ table {
     text-align: center;
 }
 
+table thead {
+    background-color: aqua;
+}
+
+.style-tr {
+    background-color: #fff;
+    border-bottom: 2px solid #000;
+}
+
 .container-derivacion {
     text-align: center;
 }
@@ -183,11 +192,11 @@ table {
 .container-creditos__li {
     position: relative;
     top: 0;
-    animation: cambiar 12s steps(3) infinite;
+    animation: cambiar 16s steps(4) infinite;
 }
 
 @keyframes cambiar {
-    100%{top: -100px;}
+    100%{top: -130px;}
 }
 
 .container-creditos__li span {
@@ -204,7 +213,7 @@ table {
     width: 100%;
     background: #fff;
     border-left: 1px solid #000;
-    animation: typing 4s steps(14) infinite;
+    animation: typing 4s steps(16) infinite;
 }
 
 @keyframes typing {
@@ -234,4 +243,9 @@ table {
         font-size: 18px;
     }
 
+    @keyframes rainbow {
+        to {
+            background-position: 95vw;
+        }
+    }
 }
